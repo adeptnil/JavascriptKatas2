@@ -3,7 +3,8 @@ const bobTxt = "bob likes dogs";
 const arrNum = [1, 3, 5, 3, 7, 3, 1, 1, 5];
 const arrNumTwo = [];
 const objExp = {a: 1, b: 7, c: 3, d: 14};
-const counts = {};
+const countOb = {};
+const strExp = "+ -";
 
 function putInHtml(answer, location) {
     let div = document.createElement("div");
@@ -63,18 +64,18 @@ putInHtml(distinct(arrNum, arrNumTwo), 'div6');
 
 
 //Kata #7
-
-
-// function distinctTwo(x){
-//     for(var i =0; i < x.length; i++){
-//         if (!arrNumTwo.includes(x[i])){
-//             arrNumTwo.push(x[i]);
-//             }
-//         }
-//         return arrNumTwo;
-//     }
-console.log(distinctTwo(arrNum));
-putInHtml(distinctTwo(arrNum), 'div7');
+sortedArr = [],
+sortedArr = arrNum.sort(function(a, b) {
+            return a - b
+        });
+for (var i = 0; i < sortedArr.length; i = i + count) {
+  count = 1;
+  for (var j = i + 1; j < sortedArr.length; j++) {
+    if (sortedArr[i] === sortedArr[j])
+      count++;
+  }
+  putInHtml(sortedArr[i] + " = " + count, 'div7');
+}
 
 
 //Kata #8
